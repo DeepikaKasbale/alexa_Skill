@@ -1,0 +1,499 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my sugar crm",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help me"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "close sugar crm app",
+                        "thanks for information",
+                        "thank you",
+                        "stop app",
+                        "close app",
+                        "close ",
+                        "stop it",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "SugarCrmLeadRequestIntent",
+                    "slots": [
+                        {
+                            "name": "lead_status",
+                            "type": "lead_status"
+                        }
+                    ],
+                    "samples": [
+                        "show me the leads from sugar crm ",
+                        "show me leads from sugarcrm with {lead_status} status",
+                        "give me leads of {lead_status} status",
+                        "show me the list of from sugar crm with {lead_status} state",
+                        "give me list of leads in {lead_status} state",
+                        "list leads",
+                        "show leads from my sugar crm",
+                        "get me the leads"
+                    ]
+                },
+                {
+                    "name": "SugarCrmGetMeetingIntent",
+                    "samples": [
+                        "show me my meetings",
+                        "tell my meetings from sugarcrm",
+                        "list meetings from sugar crm"
+                    ]
+                },
+                {
+                    "name": "SugarCrmPostMeetingIntent",
+                    "slots": [
+                        {
+                            "name": "description",
+                            "type": "MEETINGDESCRIPTION",
+                            "samples": [
+                                "it is just a stand up meeting",
+                                "Meeting is regarding status of task",
+                                "meeting is held at Kharghar location with CEO of Wizard private limited It will have include detailed demo of Alexa project Miss Nisha is going ahead with the presentation",
+                                "This meeting is with Mr.XYZ for project prosal discussion regarding dot net project"
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "i will be having meeting on {date} at {time}",
+                                "i will have meeting on {date}",
+                                "{date}",
+                                "may be on {date}",
+                                "on {date}"
+                            ]
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "samples": [
+                                "at {time} meeting will be starting",
+                                "meeting will start at {time}",
+                                "{time}",
+                                "at {time}"
+                            ]
+                        },
+                        {
+                            "name": "name",
+                            "type": "text_data",
+                            "samples": [
+                                "title is {name}",
+                                "meeting is for {name}",
+                                "{name}"
+                            ]
+                        },
+                        {
+                            "name": "duration",
+                            "type": "AMAZON.DURATION",
+                            "samples": [
+                                "{duration}",
+                                "may be for {duration}",
+                                "approximately {duration}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "alexa create a meeting in sugar crm",
+                        "i want to create a meeting in sugarcrm",
+                        "alexa create a meeting for {description}",
+                        "alexa create a meeting in sugarcrm on {date} at {time} regarding {description}",
+                        "alexa create a meeting in sugarcrm on {date} {time} for {description}",
+                        "my meeting in sugarcrm {description} on {date}",
+                        "my meeting in sugarcrm {date} for {description}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "right",
+                        "its right",
+                        "fine",
+                        "ok",
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no cancel this request",
+                        "please cancel",
+                        "no"
+                    ]
+                },
+                {
+                    "name": "SugarCrmPostLeadIntent",
+                    "slots": [
+                        {
+                            "name": "first_name",
+                            "type": "text_data",
+                            "samples": [
+                                "first name is {first_name}",
+                                "{first_name}"
+                            ]
+                        },
+                        {
+                            "name": "last_name",
+                            "type": "text_data",
+                            "samples": [
+                                "{last_name}",
+                                "last name is {last_name}"
+                            ]
+                        },
+                        {
+                            "name": "description",
+                            "type": "MEETINGDESCRIPTION",
+                            "samples": [
+                                "{description}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "create a lead in sugar crm for {description} ",
+                        "create a lead in sugar for {first_name} {last_name}",
+                        "create a lead record in sugar crm",
+                        "make a lead in sugar crm",
+                        "create a lead in sugar crm",
+                        "I want to create a lead in sugar crm"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "lead_status",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Assigned",
+                                "synonyms": [
+                                    "assign",
+                                    "Assign"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dead",
+                                "synonyms": [
+                                    "dead"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Recycled",
+                                "synonyms": [
+                                    "recycled"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Converted",
+                                "synonyms": [
+                                    "converted"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NEW",
+                                "synonyms": [
+                                    "new"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "text_data",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "john"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Divya"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deepika"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MEETINGDESCRIPTION",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "testing functionality of login module"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "testing ticket number 121212"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "deploying task on live server"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "task of preparing PPT  for client"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "meeting for XYZ purpose with MR. ABC regarding LMK project proposal discussion "
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "meeting is for testing purpose so please go through brief"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "meeting"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "desc"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "task_priority",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Low"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Medium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "High"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SugarCrmPostMeetingIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1074079194770"
+                    },
+                    "slots": [
+                        {
+                            "name": "description",
+                            "type": "MEETINGDESCRIPTION",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1074079194770.90749061516"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1074079194770.1010933213083"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1074079194770.648786928323"
+                            }
+                        },
+                        {
+                            "name": "name",
+                            "type": "text_data",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.72292247020.877449842353"
+                            }
+                        },
+                        {
+                            "name": "duration",
+                            "type": "AMAZON.DURATION",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.72292247020.1100309694568"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SugarCrmPostLeadIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1433292734116"
+                    },
+                    "slots": [
+                        {
+                            "name": "first_name",
+                            "type": "text_data",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1433292734116.732056060082"
+                            }
+                        },
+                        {
+                            "name": "last_name",
+                            "type": "text_data",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1433292734116.513615440962"
+                            }
+                        },
+                        {
+                            "name": "description",
+                            "type": "MEETINGDESCRIPTION",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1433292734116.1287730307397"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1074079194770.90749061516",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please give a brief of meeting"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1074079194770.1010933213083",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "when you will a meeting,please specify a date"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1074079194770.648786928323",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "at what time meeting will start"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1074079194770",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "you will have meeting on {date} at {time} is it right "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1433292734116.732056060082",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me the first name of lead"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1433292734116.513615440962",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me the last name of lead"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1433292734116.1287730307397",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please specify a brief regarding a lead"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1433292734116",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Lead is for {first_name} {last_name} regarding {description} Is it right "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.72292247020.877449842353",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please specify the title of meeting"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.72292247020.1100309694568",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How long will the meeting last "
+                    }
+                ]
+            }
+        ]
+    }
+}
